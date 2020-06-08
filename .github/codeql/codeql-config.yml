@@ -3,6 +3,5 @@ name: "All the goodness from lgtm.com"
 disable-default-queries: false
 
 queries:
-queries:
   - name: "SetTimeout tainted"
     uses: "./settimeout.ql"
