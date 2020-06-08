@@ -127,14 +127,21 @@ controller.create = function(req, res, next){
  */
 
 controller.update = function(req, res, next){
-  // We don't want this
-  
   const delaySave = req.body['delaySave'] || 200;
+  
+  // We don't want this
   setTimeout(() => {
     console.log('...go!')
   }, delaySave)
- 
   // END
+  
+  // We want this
+  const maxTimeout = 10000;
+  const boundedSetTimeout = delaySave <= maxTimeout ? delaySave : maxTimeout;
+   setTimeout(() => {
+    console.log('...go!')
+  }, boundedSetTimeout)
+  /// END 
   
   var PostModule = _app.settings.db.main.model('Post')
     , PostUpdate = req.body;
