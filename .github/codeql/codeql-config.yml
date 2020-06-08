@@ -4,4 +4,4 @@ disable-default-queries: false
 
 queries:
   - name: "SetTimeout tainted"
-    uses: "./settimeout.ql"
+    uses: ./.github/codeql/settimeout.ql
