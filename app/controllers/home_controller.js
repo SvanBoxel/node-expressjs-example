@@ -127,10 +127,14 @@ controller.create = function(req, res, next){
  */
 
 controller.update = function(req, res, next){
+  // We don't want this
+  
   const delaySave = req.body['delaySave'] || 0;
   setTimeout(() => {
     console.log('...go!')
   }, delaySave)
+ 
+  // END
   
   var PostModule = _app.settings.db.main.model('Post')
     , PostUpdate = req.body;
