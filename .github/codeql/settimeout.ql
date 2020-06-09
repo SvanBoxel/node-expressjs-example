@@ -1,3 +1,11 @@
+/**
+ * @name Tainted setTimeout
+ * @description User-controlled delay
+ * @kind problem
+ * @id custom-queries/tainted-settimeout
+ */
+ 
+ 
 import javascript
 import DataFlow
 import DataFlow::PathGraph
