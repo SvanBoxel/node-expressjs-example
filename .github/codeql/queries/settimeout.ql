@@ -2,6 +2,7 @@
  * @name Tainted setTimeout
  * @description User-controlled delay
  * @kind path-problem
+ * @problem.severity warning
  * @id custom-queries/tainted-settimeout
  */
  
