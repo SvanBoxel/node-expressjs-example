@@ -1,7 +1,7 @@
-name: "All the goodness from lgtm.com"
+name: "Custom query magic"
 
 disable-default-queries: false
 
 queries:
   - name: "SetTimeout tainted"
-    uses: ./.github/codeql/custom/
+    uses: ./.github/codeql/settimeout.ql@master
