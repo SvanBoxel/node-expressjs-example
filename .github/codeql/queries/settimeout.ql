@@ -1,7 +1,7 @@
 /**
  * @name Tainted setTimeout
  * @description User-controlled delay
- * @kind problem
+ * @kind path-problem
  * @id custom-queries/tainted-settimeout
  */
  
