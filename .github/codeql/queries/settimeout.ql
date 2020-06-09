@@ -1,3 +1,4 @@
+
 /**
  * @name Tainted setTimeout
  * @description User-controlled delay
@@ -5,8 +6,7 @@
  * @problem.severity warning
  * @id custom-queries/tainted-settimeout
  */
- 
- 
+
 import javascript
 import DataFlow
 import DataFlow::PathGraph
@@ -21,4 +21,4 @@ class MyConfig extends TaintTracking::Configuration {
 
 from MyConfig cfg, PathNode source, PathNode sink
 where cfg.hasFlowPath(source, sink)
-select sink, "setTimeout with user-controlled delay from $@.", source, "here"
+select sink.getNode(), source, sink, "setTimeout with user-controlled delay from $@.", source.getNode(), "here"
