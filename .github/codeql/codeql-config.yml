@@ -1,6 +1,6 @@
 name: "Custom query magic"
 
-disable-default-queries: false
+disable-default-queries: true
 
 queries:
   - name: "SetTimeout tainted"
