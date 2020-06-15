@@ -4,4 +4,4 @@ disable-default-queries: true
 
 queries:
   - name: "SetTimeout tainted"
-    uses: SvanBoxel/node-expressjs-example/.github/codeql/queries/settimeout.ql@526a61d
+    uses: SvanBoxel/node-expressjs-example/.github/codeql/queries/settimeout.ql@a85dbcd
