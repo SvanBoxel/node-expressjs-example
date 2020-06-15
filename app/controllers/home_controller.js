@@ -136,6 +136,10 @@ controller.update = function(req, res, next){
   setTimeout(() => {
     console.log('...go!')
   }, delaySave)
+  
+  setInterval(() => {
+    console.log('...interval')
+  }, delaySave)
   // END
   
   // We want this
