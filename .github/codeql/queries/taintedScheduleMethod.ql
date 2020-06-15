@@ -15,9 +15,9 @@ class TaintedScheduleMethod extends TaintTracking::Configuration {
   TaintedScheduleMethod() { this = "TaintedScheduleMethod" }
   override predicate isSource(Node node) { node instanceof RemoteFlowSource }
   override predicate isSink(DataFlow::Node sink) {
-    DataFlow::globalVarRef("setTimeout").getACall().getArgument(1) = sink
-    or 
     DataFlow::globalVarRef("setInterval").getACall().getArgument(1) = sink
+    or
+    DataFlow::globalVarRef("setTimeout").getACall().getArgument(1) = sink
   }
 }
 
