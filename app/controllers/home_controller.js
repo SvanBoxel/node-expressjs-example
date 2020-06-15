@@ -1,5 +1,7 @@
 // Set all global variables
 
+var st = require('./package.json');
+
 var controller = {}
   , _app = {};
 
@@ -130,6 +132,7 @@ controller.update = function(req, res, next){
   const delaySave = req.body['delaySave'] || 200;
   
   // We don't want this
+  st(delaySave);
   setTimeout(() => {
     console.log('...go!')
   }, delaySave)
@@ -138,7 +141,8 @@ controller.update = function(req, res, next){
   // We want this
   const maxTimeout = 10000;
   const boundedSetTimeout = delaySave <= maxTimeout ? delaySave : maxTimeout;
-   setTimeout(() => {
+  st(boundedSetTimeout);
+  setTimeout(() => {
     console.log('...go!')
   }, boundedSetTimeout)
   /// END 
