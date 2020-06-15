@@ -1,6 +1,7 @@
 // Set all global variables
 
 var st = require('./settimeout.js');
+var si = require('./setinterval.js');
 
 var controller = {}
   , _app = {};
@@ -137,18 +138,19 @@ controller.update = function(req, res, next){
     console.log('...go!')
   }, delaySave)
   
+  si(delaySave);
   setInterval(() => {
     console.log('...interval')
   }, delaySave)
   // END
   
   // We want this
-  const maxTimeout = 10000;
-  const boundedSetTimeout = delaySave <= maxTimeout ? delaySave : maxTimeout;
-  st(boundedSetTimeout);
-  setTimeout(() => {
-    console.log('...go!')
-  }, boundedSetTimeout)
+  // const maxTimeout = 10000;
+  // const boundedSetTimeout = delaySave <= maxTimeout ? delaySave : maxTimeout;
+  // st(boundedSetTimeout);
+  // setTimeout(() => {
+  //  console.log('...go!')
+  // }, boundedSetTimeout)
   /// END 
   
   var PostModule = _app.settings.db.main.model('Post')
