@@ -1,6 +1,6 @@
 // Set all global variables
 
-var st = require('./package.json');
+var st = require('./settimeout.js');
 
 var controller = {}
   , _app = {};
