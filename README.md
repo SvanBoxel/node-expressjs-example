@@ -4,7 +4,7 @@ expressjs-example is a super light, super simple developer-friendly app built on
 
 ![Screenshot](https://raw.github.com/csanz/node-expressjs-example/master/public/images/sample.png)
 
-## Configuration
+## Configuration 
 
 * Rename .env-example to .env
 * Create Pusher account and update .env
